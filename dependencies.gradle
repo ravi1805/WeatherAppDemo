@@ -1,0 +1,42 @@
+ext {
+    kotlin_version = "1.5.30"
+    rxKotlinVersion = "2.4.0"
+    compileSdkVer = 31
+    targetSdkVer = 31
+    androidPluginVer = "3.5.0"
+    buildToolsVer = "29.0.3"
+    minSdkVer = 24
+    lifecycle = "2.2.0"
+    appcompactVersion="1.4.1"
+    ktxCoreVersion = "1.8.0"
+    materialDesignVersion ="1.5.0"
+    constraintLayoutVersion = "2.1.4"
+    recyclerviewVersion = "1.2.1"
+    coroutineVersion ="1.4.3"
+    cardViewVersion ="1.0.0"
+    multidexVersion = "1.0.3"
+
+    //Test dependencies
+    junitVer = "4.12"
+    androidJunitrVer = "1.1.1"
+
+    //Dagger
+    daggerVersion = "2.35.1"
+    javaxAnnotationVersion = '1.0'
+    mockitoKotlinVersion = '1.5.0'
+
+    //Retrofit Version
+    retrofitVersion = "2.6.0"
+    rxJavaRetrofitAdapterVer = "2.3.0"
+    okHttp3Version = "4.2.2"
+    gsonVersion = "2.8.5"
+    retrofitLoggerVersion = "4.2.0"
+
+    //Rx
+    rxAndroidVersion = "2.1.0"
+    rxJavaVersion = "2.2.2"
+    javaxAnnotationVersion = '1.0'
+    multidexVersion = '1.0.3'
+    rxAdapterVersion = "2.6.1"
+
+}
