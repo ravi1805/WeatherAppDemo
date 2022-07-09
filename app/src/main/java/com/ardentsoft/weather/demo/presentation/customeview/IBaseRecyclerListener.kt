@@ -1,0 +1,3 @@
+package com.ardentsoft.weather.demo.presentation.customeview
+
+interface IBaseRecyclerListener

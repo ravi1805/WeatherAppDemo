@@ -1,27 +1,37 @@
-plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-    id 'kotlin-android-extensions'
-    id 'kotlin-kapt'
-}
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdk 32
+    compileSdkVersion compileSdkVer
+    buildToolsVersion buildToolsVer
 
     defaultConfig {
         applicationId "com.ardentsoft.weather.demo"
-        minSdk 24
-        targetSdk 32
+        minSdkVersion minSdkVer
+        targetSdkVersion targetSdkVer
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    def URL = "URL"
+    def appId="appId"
+    def CONFIG = { k -> "\"${project.properties.get(k)}\"" }
+
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", URL, CONFIG("dev_url")
+            buildConfigField "String", appId, CONFIG("appid")
+        }
+        debug {
+            minifyEnabled false
+            buildConfigField "String", URL, CONFIG("dev_url")
+            buildConfigField "String", appId, CONFIG("appid")
+
         }
     }
     compileOptions {

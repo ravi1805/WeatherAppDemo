@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.view.CityWeatherActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/_16dp"
+        android:src="@drawable/logo" />
+
+    <RelativeLayout
+        android:id="@+id/weatherDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        >
+
+    <ImageView
+        android:id="@+id/weatherIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16dp"
+        android:src="@drawable/ic_cloud" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32dp"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@+id/weatherIcon"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvTemp"
+            android:gravity="left"
+            style="@style/TextBodyStyleBold" />
+
+        <TextView
+            android:id="@+id/tvHumidity"
+            android:gravity="left"
+            style="@style/TextBodyStyleBold" />
+
+    </LinearLayout>
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/viewLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:background="@color/colorBlack">
+
+        <include layout="@layout/item_loading"/>
+    </FrameLayout>
+    <RelativeLayout
+        android:id="@+id/noNetworkLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:visibility="gone">
+        <include layout="@layout/view_no_network" />
+    </RelativeLayout>
+</RelativeLayout>
