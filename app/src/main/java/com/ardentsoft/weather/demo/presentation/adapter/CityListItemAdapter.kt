@@ -3,7 +3,6 @@ package com.ardentsoft.weather.demo.presentation.adapter
 import android.content.Context
 import android.view.ViewGroup
 import com.ardentsoft.weather.demo.R
-import com.ardentsoft.weather.demo.domain.model.UIWeatherData
 import com.ardentsoft.weather.demo.presentation.customeview.BaseViewHolder
 import com.ardentsoft.weather.demo.presentation.customeview.CustomRecyclerViewAdapter
 import com.ardentsoft.weather.demo.presentation.customeview.OnRecyclerObjectClickListener

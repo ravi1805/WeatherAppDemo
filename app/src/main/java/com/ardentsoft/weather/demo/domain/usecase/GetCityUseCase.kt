@@ -1,7 +1,6 @@
 package com.ardentsoft.weather.demo.domain.usecase
 
 import com.ardentsoft.weather.demo.domain.interactor.BaseUseCase
-import com.ardentsoft.weather.demo.domain.model.UIWeatherData
 import com.ardentsoft.weather.demo.domain.repository.IDataRepo
 import com.ardentsoft.weather.demo.domain.thread.IBackgroundThreadExecutor
 import com.ardentsoft.weather.demo.domain.thread.IUIThread

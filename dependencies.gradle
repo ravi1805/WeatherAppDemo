@@ -7,7 +7,7 @@ ext {
     buildToolsVer = "29.0.3"
     minSdkVer = 24
     lifecycle = "2.2.0"
-    appcompactVersion="1.4.1"
+    appcompactVersion="1.4.2"
     ktxCoreVersion = "1.8.0"
     materialDesignVersion ="1.5.0"
     constraintLayoutVersion = "2.1.4"
@@ -19,6 +19,11 @@ ext {
     //Test dependencies
     junitVer = "4.12"
     androidJunitrVer = "1.1.1"
+    espressoCoreVersion = "3.2.0"
+    testRule= "1.3.0-alpha02"
+    testCore="1.0.0"
+    arch_core_test_v="1.1.0"
+    test_runner="1.0.1"
 
     //Dagger
     daggerVersion = "2.35.1"

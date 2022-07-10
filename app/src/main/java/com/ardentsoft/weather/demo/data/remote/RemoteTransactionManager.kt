@@ -4,7 +4,6 @@ import com.ardentsoft.weather.demo.BuildConfig
 import com.ardentsoft.weather.demo.data.datasource.IRemoteDataTransaction
 import com.ardentsoft.weather.demo.data.remote.api.IRemoteServiceApi
 import com.ardentsoft.weather.demo.data.remote.response.WeatherDataApiResponse
-import com.ardentsoft.weather.demo.domain.model.UIWeatherData
 import com.ardentsoft.weather.demo.netowrkservice.INetworkClientService
 import io.reactivex.Observable
 import javax.inject.Inject

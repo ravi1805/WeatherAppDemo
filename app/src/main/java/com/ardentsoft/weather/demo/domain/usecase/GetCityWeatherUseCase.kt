@@ -17,7 +17,7 @@ open class GetCityWeatherUseCase
 
     override fun build(request: String): Observable<UIWeatherData> {
         return dataRepo.getCityWeatherDetails(request).flatMap { Observable.just(
-        UIWeatherData(it.main.temp,it.main.temp_min,it.main.humidity))}
+        UIWeatherData(it.main.temp,it.main.temp_min,it.main.temp_max, cityName = it.name))}
     }
 
 }

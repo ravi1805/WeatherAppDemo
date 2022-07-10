@@ -8,6 +8,7 @@
     <dimen name="progress_width">65dp</dimen>
     <dimen name="progress_height">65dp</dimen>
     <dimen name="_32dp">32dp</dimen>
+    <dimen name="_160dp">160dp</dimen>
 
 
 </resources>

@@ -21,13 +21,9 @@ class CityWeatherViewModel @Inject constructor(
 
     fun getWeatherForCity(cityName: String) {
         itemLiveData.setLoading()
-        if(iNetworkClientService.isMobileNetworkConnected()) {
-            if (cityName.isNotEmpty()) {
-                getCityWeatherUseCase.execute(WeatherDataObserver(), cityName)
-            } else {
-                errorMsgLiveData.postValue(AppUtils.noNetworkMsg)
-            }
-        }else{
+        if (iNetworkClientService.isMobileNetworkConnected()) {
+            getCityWeatherUseCase.execute(WeatherDataObserver(), cityName)
+        } else {
             errorMsgLiveData.postValue(AppUtils.noNetworkMsg)
         }
     }

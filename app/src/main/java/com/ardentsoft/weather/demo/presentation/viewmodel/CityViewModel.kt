@@ -1,15 +1,11 @@
 package com.ardentsoft.weather.demo.presentation.viewmodel
 
-import android.view.View
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.ardentsoft.weather.demo.domain.interactor.DefaultObserver
-import com.ardentsoft.weather.demo.domain.model.UIWeatherData
 import com.ardentsoft.weather.demo.domain.usecase.GetCityUseCase
-import com.ardentsoft.weather.demo.domain.usecase.GetCityWeatherUseCase
 import com.ardentsoft.weather.demo.netowrkservice.INetworkClientService
 import com.ardentsoft.weather.demo.presentation.utils.*
-import kotlinx.android.synthetic.main.activity_city.*
 import javax.inject.Inject
 
 class CityViewModel @Inject constructor(
@@ -17,12 +13,13 @@ class CityViewModel @Inject constructor(
     private val iNetworkClientService: INetworkClientService
 ) : ViewModel() {
 
-    val TAG = "CityWeatherViewModel"
+    val TAG = "CityViewModel"
 
     val cityItemLiveData = MutableLiveData<Resource<List<String>>>()
     val errorMsgLiveData = MutableLiveData<String>()
 
     fun getAllCities() {
+        cityItemLiveData.setLoading()
         if(iNetworkClientService.isMobileNetworkConnected()) {
             getCityUseCase.execute(CityDataObserver(), "")
         }else{

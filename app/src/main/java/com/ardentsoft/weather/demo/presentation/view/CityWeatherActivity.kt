@@ -54,7 +54,9 @@ class CityWeatherActivity : BaseActivity() {
                     hideProgress()
                     resourceList.data?.let { item ->
                         tvTemp.text = "Temperature : ${item.temp}\u00B0"
-                        tvHumidity.text = "Humidity : ${item.humidity}\u00B0"
+                        tvMinTemp.text = "Low Temperature : ${item.tempMin}\u00B0"
+                        tvCityName.text = "City Name : ${item.cityName}"
+                        tvMaxTemp.text = "High Temperature : ${item.tempMax}\u00B0"
                     }
                 }
                 ResourceState.ERROR -> {

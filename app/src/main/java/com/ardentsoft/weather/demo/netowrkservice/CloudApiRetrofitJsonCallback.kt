@@ -1,8 +1,8 @@
 package com.ardentsoft.weather.demo.netowrkservice
 
-import com.google.gson.Gson
 import com.ardentsoft.weather.demo.netowrkservice.exception.CloudErrorThrowable
 import com.ardentsoft.weather.demo.netowrkservice.response.ErrorResponseInJsonImpl
+import com.google.gson.Gson
 import io.reactivex.ObservableEmitter
 import okhttp3.ResponseBody
 import retrofit2.Call
